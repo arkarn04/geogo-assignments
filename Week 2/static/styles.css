@@ -70,6 +70,98 @@ i {
     border-radius: 12px;
 }
 
+form {
+    margin-top: 40px;
+    width: 75%;
+    margin-left: 60px;
+}
+
+#cityName{
+    background-color: navy;
+    color: white;
+    border: none;
+    outline: none;
+    height: 45px;
+    font-size: 25px;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+input:active {
+    outline: none;
+    border: none;
+}
+
+input:active {
+    outline: none;
+}
+
+#title1 {
+    color: white;
+    margin-left: 68px;
+    margin-top: 25px;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title1 > h3 {
+    font-family: sans-serif;
+}
+
+#set-icon {
+    margin-top: 47px;
+    margin-right: 40px;
+    color: white;
+}
+
+#set-icon:hover{
+    cursor: pointer;
+}
+
+.graph-img {
+    margin-left: 68px;
+    margin-bottom: 30px;
+    height: 210px;
+    margin-top: 30px;
+    width: 420px;
+    border-radius: 20px;
+}
+
+.curr {
+    height: 160px;
+    width: 160px;
+    background-color: #0000cc;
+    opacity: 0.4;
+    border-radius: 20px;
+    margin-top: 32px;
+    position: relative;
+}
+
+.curr > i {
+    margin-left: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 28px;
+}
+
+.curr > span {
+    margin-left: 75px;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+}
+
 .city-box {
     background-color: #3399FF;
     width: 20%;
@@ -94,11 +186,12 @@ i {
 }
 
 .weather-icon > i {
-    margin-left: 20px;
+    margin-left: 15px;
     position: absolute;
     color: white;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
+    font-size: 30px;
 }
 
 #text1 {
