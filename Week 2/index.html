@@ -31,8 +31,47 @@
 
 
             <div class="forecast-box">
-                
+                <form>
+                    <div class="form-group row">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" style="background-color: navy; border: none;">🔍</div>
+                            </div>
+                            <input type="text" class="form-control" id="cityName" placeholder="Search" autofocus>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="title-box">
+                    <div id="title1"><h2><b>Weather</b> Forecast</h2></div>
+                    <div id="set-icon"> <i class="fi fi-rr-settings"></i></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6"><img class="graph-img"s src="./static/imgs/forecast-graph-1.jpeg" alt="weather forecast graph"></div>
+                    <div class="col-3"><img style="height: 160px;width: 160px; margin-top: 30px;" src="./static/imgs/ppt1.jpeg" alt="precipitation-3-month"></div>
+                    <div class="col-3"><img style="height: 160px;width: 160px; margin-top: 30px;" src="./static/imgs/ppt2.jpeg" alt="precipitation-6-month"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6"><img class="graph-img" src="./static/imgs/forecast-graph-1.jpeg" alt="weather forecast graph"></div>
+                    <div class="col-3">
+                        <div class="curr">
+                            <i class="fi fi-rr-thermometer-half"></i>
+                            <span id="cur-temp">18'c</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="curr">
+                            <i class="fi fi-rr-raindrops"></i>
+                            <span id="cur-rain-prob">54%</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
 
 
 
