@@ -76,6 +76,11 @@ form {
     margin-left: 60px;
 }
 
+#subBtn {
+    background-color: navy;
+    border: none;
+}
+
 #cityName{
     background-color: navy;
     color: white;
