@@ -2,14 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-sacale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta http-equiv="x-ua-compatible" content="ie-edge">
         <title>Weather Forecast</title>
         <link rel="stylesheet" href="./static/styles.css">
         <link href="./static/css/uicons-regular-rounded.css" rel="stylesheet">
         <link rel="stylesheet" href="./static/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-        <script src=".static/js/bootstrap.min.js"></script>
+        <script src="./static/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="bodyflex">
@@ -31,13 +32,13 @@
 
 
             <div class="forecast-box">
-                <form>
+                <form id="queryForm">
                     <div class="form-group row">
                         <div class="input-group mb-2">
                             <div class="input-group-prepend">
                                 <div class="input-group-text" style="background-color: navy; border: none;">🔍</div>
                             </div>
-                            <input type="text" class="form-control" id="cityName" placeholder="Search" autofocus>
+                            <input type="search" class="form-control" id="cityName" placeholder="Search" autofocus>
                         </div>
                     </div>
                 </form>
@@ -142,5 +143,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="scripts.js"></script>
     </body>
 </html>
