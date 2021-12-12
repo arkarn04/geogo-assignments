@@ -32,7 +32,7 @@
 
 
             <div class="forecast-box">
-                <form id="queryForm">
+                <form id="queryForm" onsubmit="searchData(event)">
                     <div class="form-group row">
                         <div class="input-group mb-2">
                             <div class="input-group-prepend">
@@ -59,13 +59,13 @@
                     <div class="col-3">
                         <div class="curr">
                             <i class="fi fi-rr-thermometer-half"></i>
-                            <span id="cur-temp">18'c</span>
+                            <span id="cur-temp">25 &deg;c</span>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="curr">
                             <i class="fi fi-rr-raindrops"></i>
-                            <span id="cur-rain-prob">54%</span>
+                            <span id="cur-humid">54 %</span>
                         </div>
                     </div>
                 </div>
@@ -144,6 +144,5 @@
             </div>
         </div>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="scripts.js"></script>
     </body>
 </html>

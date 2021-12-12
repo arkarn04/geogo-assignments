@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie-edge">
+        <title>Weather Forecast</title>
+        <link rel="stylesheet" href="./static/styles.css">
+        <link href="./static/css/uicons-regular-rounded.css" rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="./static/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="bodyflex">
+            <div class="sidebar">
+                <div class="top-icons">
+                    <div class="icon"><i class="fi fi-rr-align-left"></i></div>
+                    <div class="icon"><i class="fi fi-rr-folder"></i></div>
+                    <div class="icon" style="background-color: #c0c0c0;"><i class="fi fi-rr-cloud"></i></div>
+                    <div class="icon"><i class="fi fi-rr-box"></i></div>
+                </div>
+
+                <div class="bottom-icons">
+                    <div class="icon" id="bell-icon"><i class="fi fi-rr-bell"></i></div>
+                    <div class="icon"><i class="fi fi-rr-user"></i></div>
+                    
+                </div>
+            </div>
+
+
+
+            <div class="forecast-box">
+                <form id="queryForm" onsubmit="searchData(event)">
+                    <div class="form-group row">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <button id="subBtn" type="submit"><div class="input-group-text" style="background-color: navy; border: none;">🔍</div></button>
+                            </div>
+                            <input type="text" class="form-control" id="cityName" placeholder="Search" autofocus>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="title-box">
+                    <div id="title1"><h2><b>Weather</b> Forecast</h2></div>
+                    <div id="set-icon"> <i class="fi fi-rr-settings"></i></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6"><img class="graph-img"s src="./static/imgs/forecast-graph-1.jpeg" alt="weather forecast graph"></div>
+                    <div class="col-3"><img style="height: 160px;width: 160px; margin-top: 30px;" src="./static/imgs/ppt1.jpeg" alt="precipitation-3-month"></div>
+                    <div class="col-3"><img style="height: 160px;width: 160px; margin-top: 30px;" src="./static/imgs/ppt2.jpeg" alt="precipitation-6-month"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6"><img class="graph-img" src="./static/imgs/forecast-graph-1.jpeg" alt="weather forecast graph"></div>
+                    <div class="col-3">
+                        <div class="curr">
+                            <i class="fi fi-rr-thermometer-half"></i>
+                            <span id="cur-temp">&deg;c</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="curr">
+                            <i class="fi fi-rr-raindrops"></i>
+                            <span id="cur-humid">%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="city-box">
+                <div class="city today-weather">
+                    <div class="weather-icon">
+                        <i style="height: 20px;" class="fi fi-rr-sun"></i>
+                    </div>
+                    <p id="text1">It's hot today!</p>
+                    <p id="text2">Be sure to grab a bottle of cold water.</p>
+                </div>
+
+                <div class="city info">
+                    <h2>INFO</h2>
+                    <div class="infos">
+                        <div class="info-icon">
+                            <i class="fi fi-rr-wind"></i>
+                        </div>
+                        <div class="info-icon">
+                            <i class="fi fi-rr-raindrops"></i>
+                        </div>
+                        <div class="info-icon">
+                            <i class="fi fi-rr-thermometer-half"></i>
+                        </div>
+                        <div id="add-icon">
+                            <i class="fi fi-rr-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city city-temp">
+                    <h2>CITY</h2>
+
+                    <div class="cities">
+                        <div class="city-data">
+                            <!-- <div class="row"> -->
+                                <div class="city-icon">
+                                    <i class="fi fi-rr-clouds"></i>
+                                </div>
+                                <div class="city-name">
+                                    <span style="color: white;">Paris</span>
+                                    <p style="color: #33ccff;">15'c</p>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="city-data">
+                            <!-- <div class="row"> -->
+                                <div class="city-icon">
+                                    <i class="fi fi-rr-umbrella"></i>
+                                </div>
+                                <div class="city-name">
+                                    <span style="color: white;">London</span>
+                                    <p style="color: #33ccff;">18'c</p>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="city-data" id="new-city">
+                            <dic class="row">
+                                <div id="city-add" class="col-2">
+                                    <i class="fi fi-rr-plus"></i>
+                                </div>
+                                <div class="col-10"></div>
+                            </dic>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
