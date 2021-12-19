@@ -18,7 +18,8 @@ const postSchema = new Schema({
         default: Date.now()
     },
     hidden: {
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 })
 
